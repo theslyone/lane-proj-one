@@ -3,6 +3,7 @@ export const ROTATE = 'ROTATE'
 export const TRANSLATE = 'TRANSLATE'
 export const SCALE = 'SCALE'
 export const OPACITY = 'OPACITY'
+export const FILTER = 'FILTER'
 export const RESET_ALL = 'RESET_ALL'
 export const RESET = 'RESET'
 
@@ -39,6 +40,13 @@ const imageActions = {
     return {
       type: OPACITY,
       payload: value
+    }
+  },
+
+  filter: (prop, value) => {
+    return {
+      type: FILTER,
+      payload: {prop, value}
     }
   },
 

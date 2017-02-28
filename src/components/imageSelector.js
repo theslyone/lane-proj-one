@@ -10,7 +10,7 @@ export default class ImageSelector extends Component {
   setSource (event) {
     var input = event.target
     var reader = new FileReader()
-    reader.onload = function(){
+    reader.onload = () => {
       var dataURL = reader.result
       this.props.onSelected(dataURL)
     }
@@ -20,7 +20,7 @@ export default class ImageSelector extends Component {
     return  (
       <div>
       <input className="file-box" type="file" id="imgFile" placeholder="Select Image"
-        onChange={(event) => this.setSource(event)}/>
+        onChange={this.setSource.bind(this)}/>
       </div>
     )
   }

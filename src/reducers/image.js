@@ -1,20 +1,20 @@
 import {Record, Map, OrderedSet} from 'immutable'
-import { SET_SOURCE, ROTATE, TRANSLATE, SCALE, OPACITY, RESET, RESET_ALL } from '../actions/image';
+import { SET_SOURCE, ROTATE, TRANSLATE, SCALE, OPACITY, FILTER, RESET, RESET_ALL } from '../actions/image';
 
 let ImageInitialState = Record({
   source: '',
   props: (new Record({
     rotation: 0,
     translation: 0,
-    scale: 1,
+    scale: 0.5,
     opacity: 1,
     grayScale: 0,
     blur: 0,
-    brightness: 100,
-    contrast: 100,
+    brightness: 1,
+    contrast: 1,
     hueRotation: 0,
     invert: 0,
-    saturation: 100,
+    saturation: 1,
     sepia: 0,
     appliedActions: Map()
   }))(),
@@ -45,7 +45,10 @@ export default function image(state = imageInitialState, action) {
     case OPACITY:
       return state.setIn(['props', 'opacity'], action.payload)
       .update('appliedActions', appliedActions => appliedActions.add('opacity'))
-    case RESET:
+    case FILTER:
+      return state.setIn(['props', action.payload.prop], action.payload.value)
+      .update('appliedActions', appliedActions => appliedActions.add(action.payload.prop))
+      case RESET:
       return state.setIn(['props', action.payload], imageInitialState.props.get(action.payload))
       .update('appliedActions', appliedActions => appliedActions.delete(action.payload))
     case RESET_ALL:

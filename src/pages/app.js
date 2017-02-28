@@ -23,7 +23,7 @@ class App extends Component {
 
           <div id="rightContainer">
     			   <div id="imageContainer" className="center">
-    				     <ImageDisplay source={this.props.image.source} />
+    				     <ImageDisplay source={this.props.image.source} imageProps={this.props.image.props} />
     			   </div>
              <div id="appliedActionsContainer" className="center">
     				     <AppliedActionList actions={this.props.image.appliedActions}
