@@ -10,6 +10,5 @@ console.log('of $ROOT/tests/index.js)');
 console.log('\n===================================================================\n');
 
 const tests = [
-  // require('./basic.spec.js'),
   require('./image.spec.js'),
 ];

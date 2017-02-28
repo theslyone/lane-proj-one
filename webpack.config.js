@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var path = require('path')
 
 // basic plugin used in every env
 var plugins = [
@@ -30,7 +31,8 @@ if (process.env.NODE_ENV === 'production') {
 
 module.exports = {
   output: {
-    path: './dist/',  // final build will be output in the dist folder
+    path: path.join(__dirname,'dist'),
+    // path: './dist/',  // final build will be output in the dist folder
     publicPath: '/dist/', // when in dev mode, the build will be in /dist/app.js
     filename: 'app.js', // the file name
     library: 'App', // the global name in a non commonjs env (ie. the browser)
@@ -53,6 +55,13 @@ module.exports = {
         test: /\.js|\.jsx|\.es6$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+            'file?hash=sha512&digest=hex&name=[hash].[ext]',
+            'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+        ]
       }
     ]
   },
