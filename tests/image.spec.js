@@ -56,7 +56,7 @@ describe('Image reducer test', () => {
     state = imageReducer(state, {type: RESET_ALL})
     expect(state.props.rotation).to.equal(0)
     expect(state.props.translation).to.equal(0)
-    expect(state.props.scale).to.equal(1)
+    expect(state.props.scale).to.equal(0.5)
     expect(state.props.opacity).to.equal(1)
   })
 
@@ -64,7 +64,7 @@ describe('Image reducer test', () => {
     state = imageReducer(state, {type: RESET_ALL})
     expect(state.props.rotation).to.equal(0)
     expect(state.props.translation).to.equal(0)
-    expect(state.props.scale).to.equal(1)
+    expect(state.props.scale).to.equal(0.5)
     expect(state.props.opacity).to.equal(1)
   })
 

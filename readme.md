@@ -1,9 +1,7 @@
 lane-proj-one
 ==============
 
-[![build status][1]][2]
-
-This is a project using React, Redux, React Router and Redux Devtools that is used to bootstrap a dev challenge. Everything is already setup for dev, test and linting. This project is using ES2015 syntax with the help of Babel 6.
+This is a project using React, Redux and Redux Devtools that is used to bootstrap a dev challenge. Everything is already setup for dev, test and linting. This project uses ES2015 syntax with the help of Babel 6.
 
 first run `npm install`
 
