@@ -1,9 +1,9 @@
-react-redux-template
+lane-proj-one
 ==============
 
 [![build status][1]][2]
 
-This is a project template using React, Redux, React Router and Redux Devtools that you can use to bootstrap your own projects. Everything is already setup for dev, test and linting. This project is using ES2015 syntax with the help of Babel 6.
+This is a project using React, Redux, React Router and Redux Devtools that is used to bootstrap a dev challenge. Everything is already setup for dev, test and linting. This project is using ES2015 syntax with the help of Babel 6.
 
 first run `npm install`
 
@@ -54,6 +54,3 @@ Dependencies
   * `eslint` : the linter, uses `.eslinrc` and `.eslintignore`
   * `eslint-config-airbnb` : for ES2015 related rules
   * `eslint-plugin-react` : for React related rules
-
-[1]: https://api.travis-ci.org/mathieuancelin/react-redux-template.svg
-[2]: https://api.travis-ci.org/mathieuancelin/react-redux-template

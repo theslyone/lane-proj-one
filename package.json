@@ -1,7 +1,7 @@
 {
-  "name": "app",
+  "name": "lane-proj-one",
   "version": "1.0.0",
-  "description": "React redux application template",
+  "description": "React redux application",
   "private": true,
   "main": "lib/main.js",
   "jsnext:main": "src/main.js",
@@ -16,7 +16,7 @@
     "lib": "rm -rf ./lib && babel src --out-dir lib",
     "build": "npm run test && npm run test:covtext && npm run lint && npm run lib && npm run bundle"
   },
-  "author": "Mathieu ANCELIN",
+  "author": "Okonkwo Sylvester",
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "^6.13.0",
@@ -39,6 +39,7 @@
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
     "chai": "^3.5.0",
+    "cz-conventional-changelog": "^2.0.0",
     "eslint": "^3.4.0",
     "eslint-config-airbnb": "^10.0.1",
     "eslint-plugin-import": "^1.14.0",
@@ -53,5 +54,10 @@
     "redux-devtools-log-monitor": "^1.0.11",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
