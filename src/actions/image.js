@@ -7,6 +7,11 @@ export const FILTER = 'FILTER'
 export const RESET_ALL = 'RESET_ALL'
 export const RESET = 'RESET'
 
+
+/**
+ * imageActions
+ * @type {Object}
+ */
 const imageActions = {
   setSource: (src) => {
     return {

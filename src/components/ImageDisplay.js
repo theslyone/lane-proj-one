@@ -5,7 +5,6 @@ const getImageStyle = (prop) => {
     `rotate(${prop.rotation}deg)
     translateX(${prop.translation}px)
     scale(${prop.scale})`
-
   let filter =
     `grayscale(${prop.grayScale})
     blur(${prop.blur})

@@ -5,7 +5,7 @@ const ImageAction = ({name, min=0, max=1, step=1, value=0, onChange}) => (
   <p>
     <label htmlFor={name}>{toPascalCase(name)}</label>
     <input id={name} name={name} type="range" min={min} max={max} step={step} value={value}
-    onChange={(event) => onChange(event.target.value)} />
+      onChange={(event) => onChange(event.target.value)} />
   </p>
 )
 

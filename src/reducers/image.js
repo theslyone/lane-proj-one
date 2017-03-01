@@ -15,8 +15,7 @@ let ImageInitialState = Record({
     hueRotation: 0,
     invert: 0,
     saturation: 1,
-    sepia: 0,
-    appliedActions: Map()
+    sepia: 0
   }))(),
   appliedActions: OrderedSet()
 })
