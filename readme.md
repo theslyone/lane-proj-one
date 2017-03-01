@@ -1,10 +1,10 @@
-lane-proj-one
+react-image-editor
 ==============
 
 This is a project using React, Redux and Redux Devtools that is used to bootstrap a dev challenge. Everything is already setup for dev, test and linting. This project uses ES2015 syntax with the help of Babel 6.
 
 #Getting started
-Simply `git clone https://github.com/theslyone/lane-proj-one.git`.
+Simply `git clone https://github.com/theslyone/react-image-editor.git`.
 
 Run `npm install`.
 
